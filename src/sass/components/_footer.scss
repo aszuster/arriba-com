@@ -1,0 +1,92 @@
+@use '../abstracts' as *;
+
+.footer {
+    text-align: center;
+    padding: 55px 0 232px 0;
+    position: relative;
+    p, h2 {
+        font-size: rem(28px);
+        line-height: 31px;
+        margin-bottom: 40px;
+    }
+    h2 {
+        font-family: $primary-font;
+        font-weight: 700;
+        margin-bottom: 35px;
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 38px;
+            height: 6px;
+            border-radius: 5px;
+            vertical-align: middle;
+            position: relative;
+            top: -3px;
+            margin-right: 9px;
+            background-color: black;
+        }
+    }
+    @include bp-large {
+        p {
+            font-size: rem(64px);
+            line-height: 71px;
+        }
+        h2 {
+            font-size: rem(60px);
+            line-height: 54px;
+            margin-bottom: 50px;
+        }
+    }
+}
+.hazscroll {
+    width: 100%;
+    max-width: 80px;
+    margin-bottom: 10px;
+    animation: scrollUp 5s ease-in-out infinite;
+    @include bp-xlarge {
+        max-width: 108px;
+    }
+}
+@keyframes scrollUp {
+	0% {
+		transform: translatey(0px);
+	}
+	40% {
+		transform: translatey(-10px);
+	}
+    80% {
+        transform: translatey(-10px);
+    }
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+.imgFooter {
+    position: absolute;
+    z-index: 9999;
+    display: none;
+    @include bp-large {
+        display: block;
+    }
+}
+.imgFooter1 {
+    width: 360px;
+    left: 0;
+    top: -400px;
+
+    @include bp-xlarge {
+        top: -800px;
+        left: 30px;
+    }
+}
+.imgFooter2 {
+    width: 852px;
+    left: 0;
+    bottom: -50px;
+}
+.imgFooter3 {
+    width: 791px;
+    right: 0px;
+    bottom: 0px;
+}

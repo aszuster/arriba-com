@@ -1,0 +1,686 @@
+@use "../abstracts" as *;
+
+.containerAnimation {
+  text-align: center;
+  z-index: 9999;
+  position: relative;
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  @include bp-animacion {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 650px;
+  }
+  @include bp-xlarge {
+    max-width: 1050px;
+    margin-top: 650px;
+  }
+  @include bp-xxlarge {
+    max-width: 1350px;
+  }
+}
+
+.coin {
+  height: 117px;
+  z-index: 10;
+}
+.linecontainer {
+  position: relative;
+}
+.linecontainer svg {
+   opacity: 0;
+  // width: 500px;
+
+  @media only screen and (min-width: 768px) {
+    // opacity: 0;
+    width: 100%;
+  }
+}
+
+.pathTablet {
+  margin-top: 70px;
+  margin-bottom: 150px;
+  opacity: 0;
+}
+
+.pathDsk {
+  display: none;
+  @media only screen and (min-width: 768px) {
+    opacity: 0;
+    display: block;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  @include bp-xxlarge {
+    max-height: 4000px;
+  }
+  // @include bp-animacion {
+  //   max-height: 2000px;
+  //   margin: 0 auto;
+  // }
+}
+
+.pathMobile {
+  margin-top: 50px;
+  margin-bottom: 150px;
+  height: 4000px;
+  z-index: 10;
+  opacity: 0;
+  @media only screen and (min-width: 768px) {
+    // opacity: 0;
+    display: none;
+  }
+}
+
+.tube1 {
+  left: 62px;
+  top: 2985px;
+  height: 1138px;
+  object-fit: cover;
+
+  @media only screen and (min-width: 768px) {
+    // opacity: 0;
+    display: block;
+    position: absolute;
+    left: 48.5%;
+    top: 32%;
+    width: 24%;
+  }
+}
+
+.tube2 {
+  position: absolute;
+  left: -272px;
+  top: 938px;
+  height: 984px;
+  z-index: -10;
+  transform: rotate(90deg);
+  @media only screen and (min-width: 768px) {
+    // opacity: 0;
+    display: block;
+    position: absolute;
+    width: 17%;
+    left: 35%;
+    top: 82%;
+  }
+}
+
+.tube3 {
+  position: absolute;
+  left: 37px;
+  top: 2334px;
+  height: 626px;
+  z-index: -10;
+  transform: scaleX(-1) rotate(269deg);
+  @media only screen and (min-width: 768px) {
+    // opacity: 0;
+    display: block;
+    position: absolute;
+    width: 26%;
+    left: 52%;
+    top: 167%;
+  }
+}
+
+.tube4 {
+  position: absolute;
+  left: -148px;
+  top: 112px;
+  height: 638px;
+  z-index: -10;
+  transform: scalex(-1) rotate(180deg);
+  z-index: 2;
+  @media only screen and (min-width: 768px) {
+    // opacity: 0;
+    display: none;
+  }
+}
+
+.tube5 {
+  display: none;
+}
+
+.mobileCut {
+  position: absolute;
+  left: 62px;
+  left: 185px;
+  bottom: 200px;
+  height: 889px;
+  width: 494px;
+  display: flex;
+  align-content: flex-end;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+// BOXES 1 / 2 / 3
+
+//BOX GENERAL
+
+.box {
+  position: absolute;
+  z-index: 99999;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  .box-little {
+    display: none;
+  }
+  .box-content {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .box-cel {
+    position: relative;
+  }
+  .cel {
+    width: 100%;
+    max-width: 212px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    z-index: 99;
+  }
+  h3 {
+    font-size: rem(18px);
+    line-height: 20px;
+    margin: 12px 0;
+  }
+  p {
+    line-height: 18px;
+  }
+  .box-caption {
+    width: 212px;
+    margin: 20px auto 0 auto;
+  }
+}
+
+// BOX 3
+
+.box3 {
+  top: 538px;
+  .box-cel {
+    background: url("../../images/boxes/box3-esfera.png") no-repeat center
+      center;
+    background-size: contain;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .estrella,
+  .escalera,
+  .estrellatriangulo {
+    position: absolute;
+    left: -190px;
+    bottom: 50px;
+  }
+  .escalera {
+    max-width: 260px;
+  }
+  .estrellatriangulo {
+    width: 500px;
+    bottom: -90px;
+    left: -60px;
+  }
+  .estrella {
+    left: auto;
+    right: -300px;
+    bottom: 400px;
+  }
+}
+
+// BOX 2
+
+.box2 {
+  top: 1738px;
+
+  .box-cel {
+    .cuadricula {
+      position: absolute;
+      right: -143px;
+      top: 240px;
+      width: 207px;
+      z-index: -9;
+    }
+    @include bp-large {
+      .cuadricula {
+        width: 317px;
+      }
+    }
+  }
+}
+
+// BOX 1
+
+.box1 {
+  top: 2980px;
+
+  .box1esfera,
+  .box1estrella {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    z-index: 1;
+  }
+  .box1esfera {
+    width: 140px;
+    top: auto;
+    bottom: -20px;
+
+    @include bp-large {
+      width: 200px;
+      left: 0;
+    }
+  }
+  .box1estrella {
+    z-index: 9;
+    top: -24px;
+    width: 20px;
+    left: 100px;
+  }
+}
+
+// BOXES EN TABLET
+
+@include bp-animacion {
+  .box3 {
+    top: -600px;
+    .box-content {
+      @include transform(translateX(-80px));
+    }
+  }
+  .box2 {
+    top: 1170px;
+    .box-content {
+      @include transform(translateX(200px));
+    }
+  }
+  .box1 {
+    top: 2000px;
+    .box-content {
+      @include transform(translateX(-150px));
+    }
+  }
+}
+
+@include bp-xlarge {
+  .box {
+    .box-little {
+      display: block;
+      border: 1px solid #ededed;
+      background: rgba(210, 210, 210, 0.2);
+      backdrop-filter: blur(14px);
+      border-radius: 12px;
+      padding: 12px 16px;
+      box-sizing: border-box;
+      width: 100%;
+      white-space: nowrap;
+      margin: 32px 0;
+      &::before {
+        content: "";
+        background: url("../../images/boxes/icon.png") no-repeat center center;
+        width: 17px;
+        height: 34px;
+        background-size: contain;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 20px;
+      }
+    }
+    .box-content {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 740px;
+      .box-cel {
+        width: 100%;
+        max-width: 540px;
+        .cel {
+          max-width: 242px;
+        }
+      }
+      .box-caption {
+        width: 354px;
+        position: relative;
+        z-index: 99;
+        h3 {
+          font-size: rem(32px);
+          line-height: 36px;
+        }
+      }
+    }
+  }
+
+  .box3 {
+    top: -500px;
+    .box-content {
+      @include transform(translateX(53px));
+      .box-caption {
+        @include transform(translateX(-50px) translateY(-20px));
+        h3 {
+          font-size: rem(32px);
+          line-height: 36px;
+        }
+        .box-little {
+          @include transform(translateX(-80px));
+        }
+      }
+    }
+  }
+  .box2 {
+    top: 1310px;
+    .box-content {
+      @include transform(translateX(200px));
+      .box-cel {
+        order: 2;
+      }
+      .box-caption {
+        @include transform(translateX(80px) translateY(20px));
+        order: 1;
+        .box-little {
+          @include transform(translateX(40px));
+        }
+      }
+    }
+  }
+  .box1 {
+    top: 2800px;
+    left: -140px;
+    .box-content {
+      @include transform(translateX(-120px));
+      .box-cel {
+        order: 2;
+      }
+      .box-caption {
+        @include transform(translateX(100px) translateY(20px));
+        p {
+          max-width: 350px;
+        }
+        order: 1;
+        .box-little {
+          @include transform(translateX(40px));
+        }
+      }
+    }
+  }
+}
+
+@include bp-xxlarge {
+  .box {
+    .box-content {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 740px;
+      .box-cel {
+        width: 100%;
+        max-width: 540px;
+        .cel {
+          max-width: 242px;
+        }
+      }
+      .box-caption {
+        width: 354px;
+        position: relative;
+        z-index: 99;
+        h3 {
+          font-size: rem(32px);
+          line-height: 36px;
+        }
+      }
+    }
+  }
+
+  .box3 {
+    top: -420px;
+    .box-content {
+      @include transform(translateX(53px));
+      .box-caption {
+        @include transform(translateX(-50px) translateY(-20px));
+        h3 {
+          font-size: rem(32px);
+          line-height: 36px;
+        }
+        .box-little {
+          @include transform(translateX(0px));
+        }
+      }
+    }
+  }
+  .box2 {
+    top: 1310px;
+    .box-content {
+      @include transform(translateX(200px));
+      .box-cel {
+        order: 2;
+      }
+      .box-caption {
+        @include transform(translateX(60px) translateY(20px));
+        order: 1;
+        .box-little {
+          @include transform(translateX(0px));
+        }
+      }
+    }
+  }
+  .box1 {
+    top: 2800px;
+    left: -140px;
+    .box-content {
+      @include transform(translateX(-150px));
+      .box-cel {
+        order: 2;
+      }
+      .box-caption {
+        @include transform(translateX(60px) translateY(20px));
+        order: 1;
+        .box-little {
+          @include transform(translateX(0px));
+        }
+      }
+    }
+  }
+}
+
+// COIN TUBES EN OTROS DISPOSITIVOS
+
+// COIN
+
+.coinContainer {
+  position: relative;
+  z-index: 6;
+}
+.coin {
+  @include bp-animacion {
+    height: 90px;
+  }
+  @include bp-xlarge {
+    height: 100px;
+  }
+  @include bp-xxlarge {
+    height: 120px;
+  }
+}
+
+// TUBE 4
+
+.tube4 {
+  @include bp-animacion {
+    display: block;
+    width: 100%;
+    @include transform(rotate(0deg));
+    max-width: 457px;
+    height: auto;
+    right: 44px;
+    left: auto;
+    top: 212px;
+  }
+  @include bp-xlarge {
+    max-width: 471px;
+    right: 208px;
+    top: 203px;
+  }
+  @include bp-xxlarge {
+    max-width: 688px;
+    right: 210px;
+    top: 198px;
+  }
+}
+
+// TUBE 2
+
+.tube2 {
+  @include bp-animacion {
+    display: block;
+    width: 100%;
+    @include transform(rotate(0deg));
+    max-width: 339px;
+    height: auto;
+    right: auto;
+    left: -78px;
+    top: 1058px;
+
+  }
+  @include bp-xlarge {
+    max-width: 347px;
+    left: 95px;
+    top: 1058px;
+
+  }
+  @include bp-xxlarge {
+    max-width: 467px;
+    left: 35px;
+    top: 1167px;
+
+  }
+}
+
+
+// TUBE 5
+
+.tube5 {
+  @include bp-animacion {
+    display: block;
+    position: absolute;
+    right: -83px;
+    top: 2910px;
+    width: 100%;
+    max-width: 522px;
+  }
+  @include bp-xlarge {
+    right: 78px;
+    top: 2911px;
+    max-width: 547px;
+  }
+  @include bp-xxlarge {
+      right: 33px;
+      max-width: 770px;
+      top: 2780px;
+  }
+}
+
+@include bp-animacion {
+  .mobileCut,
+  .tube3 {
+    display: none !important;
+  }
+}
+
+
+#main {
+  overflow: hidden;
+}
+
+.transparent {
+  z-index: 9;
+  opacity: 0.6;
+}
+
+// IMAGENES DE FONDO EN DESKTOP
+
+.bodyImg {
+  display: none;
+}
+
+@include bp-xlarge {
+  .bodyImg {
+    display: block;
+    position: absolute;
+  }
+  .bodyImg1 {
+    top: -600px;
+    left: 19%;
+    width: 72px;
+  }
+  .bodyImg2 {
+    top: -650px;
+    right: 10%;
+    width: 180px;
+  }
+  .bodyImg3 {
+    top: 650px;
+    left: 0;
+    width: 283px;
+  }
+  .bodyImg4 {
+    top: 350px;
+    right: 50%;
+    width: 180px;
+  }
+  .bodyImg4b {
+    top: 160px;
+    right: 0;
+    width: 260px;
+  }
+  .bodyImg5 {
+    top: 1800px;
+    right: 45%;
+    width: 260px;
+  }
+  .bodyImg6 {
+    top: 2200px;
+    right: 0;
+    width: 400px;
+  }
+  .bodyImg7 {
+    top: 2200px;
+    left: 20%;
+    width: 540px;
+  }
+}
+
+@include bp-xxlarge {
+  .bodyImg1 {
+    width: 252px;
+    left: 10%;
+    top: -700px;
+  }
+  .bodyImg2 {
+    top: -720px;
+    width: 228px;
+  }
+  .bodyImg3 {
+    top: 350px;
+    width: 283px;
+  }
+  .bodyImg4 {
+    top: 650px;
+    width: 204px;
+  }
+  .bodyImg5 {
+    top: 1800px;
+    right: 40%;
+    width: 287px;
+  }
+  .bodyImg6 {
+    top: 2200px;
+    width: 400px;
+  }
+}
+
+.containerAnimation-box {
+  position: relative;
+}

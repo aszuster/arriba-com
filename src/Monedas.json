@@ -1,0 +1,14 @@
+{
+  "moneda": [
+    {
+      "value": "Chile",
+      "text": "CHI",
+      "icon": "../images/chile.svg"
+    },
+    {
+      "value": "Colombia",
+      "text": "COL",
+      "icon": "../images/colombia.svg"
+    }
+  ]
+}

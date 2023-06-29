@@ -1,0 +1,122 @@
+@use '../abstracts' as *;
+
+.slide__card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px 26px;
+    max-width: 230px;
+    box-sizing: border-box;
+    text-align: right;
+    @include transition(all 250ms ease-in-out);
+    @include bp-xxlarge {
+        max-width: 266px;
+    }
+    * {
+        color: black;
+    }
+    small {
+        font-weight: 700;
+        font-size: rem(60px);
+        line-height: 66px;
+    }
+    img.mc {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    h3 {
+        text-align: left;
+        font-size: rem(28px);
+        line-height: 31px;
+        margin-bottom: 10px;
+    }
+    p {
+        text-align: left;
+        font-size: 16px;
+        left: 80px;
+        height: 0;
+        opacity: 0;
+    }
+
+    &:hover {
+        border: 2px solid black;
+        -moz-transform: translateY(-30px);
+        -webkit-transform: translateY(-20px);
+        -o-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        transform: translateY(-30px);
+        p {
+            opacity: 1;
+            height: auto;
+            left: 0;
+        }
+        .slide__card-eye {
+            border: 1px solid white;
+            -webkit-box-shadow: -4px 4px 1px 1px black;
+            box-shadow: -4px 4px 1px 1px black;
+        }
+    }
+}
+.slide__card-eye {
+    margin-left: auto;
+    background-color: black;
+    display: block;
+    border-radius: 80px;
+    height: 52px;
+    width: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    @include transition(all 250ms ease-in-out);
+    cursor: pointer;
+    img {
+        width: auto!important;
+        @include transition(all 250ms ease-in-out);
+    }
+    &:hover {
+        img {
+            -moz-transform: scale(1.3);
+            -webkit-transform: scale(1.3);
+            -o-transform: scale(1.3);
+            -ms-transform: scale(1.3);
+            transform: scale(1.3);
+        }
+    }
+}
+.caption {
+    display: block;
+}
+// .slick-list{padding:0 40px 0 0 !important;}
+
+@include bp-xlarge {
+    .forSlide {
+        overflow: hidden;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+
+@include bp-xxlarge {
+    .slick-slider .slick-track, .slick-slider .slick-list {
+        overflow: visible;
+    }
+    .slick-track {
+        position: relative;
+        left: -30px;
+    }
+    .forSlide {
+        padding-left: 30px;
+        box-sizing: border-box;
+        position: relative;
+        &::after {
+            content: "";
+            background: linear-gradient(90deg, transparent, black);
+            width: 25px;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+}

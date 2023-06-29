@@ -1,0 +1,54 @@
+@use '../abstracts' as *;
+
+.button {
+    background-color: white;
+    border-radius: 50px;
+    font-size: 18px;
+    color: black;
+    font-weight: 700;
+    padding: 26px 24px;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    border: 2px solid white;
+    text-align: center;
+    box-sizing: border-box;
+    @include transition(all 250ms ease-in-out);
+    &:hover {
+        border: 2px solid black;
+        -webkit-box-shadow: -8px 8px 1px 1px #fff;
+        box-shadow: -8px 8px 1px 1px #fff;
+    }
+}
+
+.button-arrow-up {
+    &::after {
+        content: url('../../images/icon-arrow-arriba.svg');
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+    }
+}
+
+.icon-arrow-right {
+    width: 210px;
+    padding: 18px 24px;
+    &::after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+        -moz-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+
+        height: 22px;
+        width: 22px;
+        background-size: 22px 22px;
+        background-image: url("../../images/icon-arrow-arriba.svg");
+        background-repeat: no-repeat;
+
+    }
+}

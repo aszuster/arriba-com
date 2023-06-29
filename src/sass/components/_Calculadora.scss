@@ -1,0 +1,238 @@
+@use "../abstracts" as *;
+
+.calculadora {
+  max-width: 400px;
+  text-align: left;
+  input {
+    width: 100%;
+    border: 0;
+    box-sizing: border-box;
+    height: 66px;
+    border-radius: 8px;
+    font-size: rem(18px);
+    line-height: 20px;
+    font-weight: 400;
+    font-family: $primary-font;
+    padding: 10px;
+  }
+  .disclaimer {
+    display: none;
+  }
+}
+.css-319lph-ValueContainer,
+.css-6j8wv5-Input {
+  // height: 65px;
+  border: 0 !important;
+}
+.calculadora__label {
+  margin: 32px 0 16px 0;
+  display: block;
+}
+.css-1s2u09g-control,
+.css-b62m3t-container,
+.css-1s2u09g-control {
+  border-radius: 8px !important;
+  border: 0;
+}
+.css-319lph-ValueContainer {
+  padding-top: 0 !important;
+}
+.css-qc6sy-singleValue {
+  padding-top: 0px;
+}
+
+.css-1okebmr-indicatorSeparator {
+  display: none;
+}
+
+.css-qc6sy-singleValue {
+  font-weight: 700;
+  font-size: rem(18px);
+}
+
+.css-qc6sy-singleValue img {
+  height: 38px;
+  width: 38px;
+  margin-right: 5px;
+}
+
+.css-26l3qy-menu img {
+  height: 38px;
+  width: 38px;
+  margin-right: 5px;
+}
+
+.calculadora__grid {
+  display: flex;
+  width: 100%;
+  .calculadora__grid-col {
+    width: 50%;
+    padding: 0 10px 0 0;
+    input {
+      height: 55px !important;
+    }
+    &:nth-child(2) {
+      padding: 0 0 0 10px;
+      position: relative;
+      input {
+        height: auto;
+        padding: 33px 10px 33px 26px;
+      }
+      &:before {
+        content: "$";
+        font-family: $primary-font;
+        position: absolute;
+        top: 25px;
+        left: 24px;
+      }
+    }
+  }
+}
+
+.calculadora__right {
+  display: flex;
+  flex-wrap: wrap;
+  div {
+    width: 50%;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 32px 0 24px 0;
+    &:nth-child(1) {
+      border-right: 1px solid black;
+    }
+    small {
+      font-size: rem(16px);
+      line-height: 18px;
+    }
+    h4,
+    h5 {
+      font-weight: 700;
+      font-size: rem(24px);
+      line-height: 26px;
+    }
+  }
+  a.button {
+    display: block;
+    width: 100%;
+    align-self: stretch;
+  }
+}
+@include bp-large {
+  .calculadora {
+    display: flex;
+    max-width: 792px;
+    margin-bottom: 50px;
+  }
+  .calculadora__left,
+  .calculadora__right {
+    background: rgba($color: #fff, $alpha: 0.3);
+    padding: 1px 20px 28px 20px;
+    border-radius: 12px;
+    width: 50%;
+    margin: 1%;
+  }
+  .calculadora__right {
+    display: block;
+    padding-top: 40px;
+    div {
+      text-align: left;
+      width: 100%;
+      margin: 0 0 20px 0;
+      &:nth-child(1) {
+        border-right: 0;
+      }
+      small {
+        font-size: rem(18px);
+        line-height: 20px;
+      }
+      h4 {
+        font-size: rem(60px);
+        line-height: 66px;
+      }
+      h5 {
+        font-size: rem(32px);
+        line-height: 36px;
+      }
+    }
+    .disclaimer {
+      display: block;
+    }
+    .button {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
+}
+// .css-1pahdxg-control:active {
+//   border-color: white !important;
+//   box-shadow: none !important;
+// }
+
+// .css-1pahdxg-control:focus {
+//   border: none !important;
+//   box-shadow: none !important;
+// }
+
+// .css-1pahdxg-control {
+//   border-color: white !important;
+//   box-shadow: none !important;
+// }
+
+// .css-1pahdxg-control:hover {
+//   border-color: white !important;
+//   box-shadow: none !important;
+// }
+
+// .css-1pahdxg-control {
+//   box-shadow: none !important;
+// }
+
+// .css-4ljt47-MenuList > div {
+
+//   color: #fff;
+
+// }
+
+// .css-4ljt47-MenuList > div:hover {
+//   background-color: #000;
+//   color: #fff;
+// }
+
+// .arriba__option:hover {
+//     background-color: #000;
+//     color: white;
+// }
+
+
+// .arriba__option {
+//   &:hover {
+//     color: white!important;
+//   }
+// }
+.css-6j8wv5-Input {
+  opacity: 0;
+}
+
+.css-tj5bde-Svg {
+  width: 26px;
+  height: 18px;
+}
+
+.css-tj5bde-Svg path {
+  d: path("m21 1.25-10 9.375L1 1.25");
+  fill: none;
+  stroke: #000;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform-origin: center, center;
+}
+
+.css-fke1ie-indicatorContainer {
+  transform-origin: center, center;
+}
+
+.css-1hb7zxy-IndicatorsContainer {
+  padding-right: 3px;
+  transform-origin: center, center;
+}

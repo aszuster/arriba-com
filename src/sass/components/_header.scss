@@ -1,0 +1,184 @@
+@use '../abstracts' as *;
+
+.header {
+    // background: url('../../images/hero-bkg-mobile.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    .container {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .copyright {
+        display: none;
+    }
+    @include bp-large{
+        // background: url('../../images/hero-bkg-desktop.jpg') no-repeat center center;
+        background-size: cover;
+        .container {
+            align-items: flex-start;
+        }
+        .copyright {
+            display: block;
+            margin-top: 7rem;
+        }
+        &:before,
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 15px;
+            width: 15px;
+            background-size: 15px 15px;
+            background-image: url("../../images/star.svg");
+            background-repeat: no-repeat;
+            right: 25%;
+            bottom: 120px;
+        }
+        &:after {
+            content: "";
+            right: 20%;
+            bottom: auto;
+            top: 20%;
+        }
+    }
+}
+
+.header__top {
+    width: 100%;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    h1 {
+        font-size: rem(48px);
+        line-height: 52px;
+        margin-bottom: 42px;
+        position: relative;
+        &:before {
+            content:"";
+            display: block;
+            position: absolute;
+            height: 25px;
+            width: 25px;
+            background-size: 25px 25px;
+            background-image: url("../../images/star.svg");
+            background-repeat: no-repeat;
+            right: 25%;
+            top: -1px;
+            @include bp-large {
+                top: -80px;
+                right: 15%
+            }
+        }
+    }
+    p {
+        font-weight: 400;
+        font-size: rem(20px);
+        line-height: 22px;
+        font-family: $primary-font;
+        position: relative;
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 25px;
+            width: 25px;
+            background-size: 25px 25px;
+            background-image: url("../../images/star.svg");
+            background-repeat: no-repeat;
+            left: 12px;
+            top: -40px;
+            @include bp-large {
+                height: 15px;
+                width: 15px;
+                background-size: 15px 15px;
+                top: -80px;
+                left: 20px;
+            }
+        }
+    }
+    .button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    @include bp-large {
+        text-align: left;
+        border-bottom: 1px solid white;
+        margin-bottom: 1rem;
+        margin-top: 12rem;
+        h1 {
+            br {
+                display: none;
+            }
+            font-size: rem(70px);
+            line-height: 80px;
+            display: inline-block;
+        }
+        p {
+            font-size: rem(40px);
+            line-height: 44px;
+        }
+        .buttonContent {
+            width: 240px;
+            white-space: nowrap;
+            float: right;
+            display: inline-block;
+        }
+    }
+    @include bp-xxlarge {
+        h1 {
+            font-size: rem(100px);
+            line-height: 110px;
+        }
+        .buttonContent {
+            width: 312px;
+            position: relative;
+            top: 28px;
+            .button {
+                padding: 13px 20px;
+            }
+        }
+    }
+}
+.header__bottom {
+    .navbar {
+        margin-bottom: 50px;
+    }
+    @include bp-large {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .socials {
+            order: 1;
+        }
+        .navbar {
+            order: 2;
+            margin-bottom: 0;
+            li {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 0 0 16px;
+            }
+        }
+    }
+}
+
+
+#DispositivosVideo {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);  
+    z-index: -100;
+    background-size: cover;
+
+    opacity: 1;
+}

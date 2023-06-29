@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+.navbar {
+    li {
+        margin-bottom: 14px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    a {
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: rem(18px);
+        line-height: 20px;
+        @include transition(all 250ms ease-in-out);
+        &:hover {
+            color: black;
+        }
+    }
+}

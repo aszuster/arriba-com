@@ -1,0 +1,16 @@
+{
+  "coins": [
+    {
+      "value": "bitcoin",
+      "text": "BTC",
+      "icon": "images/bitcoin.svg",
+      "rate": "2"
+    },
+    {
+      "value": "ethereum",
+      "text": "ETH",
+      "icon": "images/bitcoin.svg",
+      "rate": "6"
+    }
+  ]
+}
